@@ -1,0 +1,68 @@
+
+# Simulation parameters for the layered two‑phase Poiseuille flow case.
+# Lines beginning with '#' are comments.  Blank lines are ignored.
+#
+# Domain size (nx=ny) in lattice units.  A value of 128 corresponds to a
+# domain of 128 × 128 lattice nodes.  Adjust as necessary to resolve the
+# interfacial thickness (xi) and to achieve the desired Reynolds number.
+N           128
+
+# Total physical simulation time in lattice units.  The actual number of
+# iterations is determined internally via max_t/dt.  For small ulb values
+# this parameter may need to be increased to reach steady state.
+max_t       20
+
+# Output frequency for text diagnostics.  A value of 100 means every 100
+# iterations.  Set to zero to disable.
+out_freq    1000
+
+# Output frequency for VTK files for post‑processing.  Set to zero to
+# disable.  Note that VTK output can generate large files.
+vtk_freq    1000
+
+# Order parameter values for the two fluids.  By default fluid A (upper
+# half) has φ = 1 and fluid B (lower half) has φ = 0.
+phi_l       1.0
+phi_g       0.0
+
+# Densities of the two fluids.  The layered Poiseuille test commonly uses
+# matched densities (ρA=ρB=1) to focus on viscosity effects.  Other values
+# may be supplied to explore density contrasts.
+rho_l       1.
+rho_g       1.0
+
+# Surface tension coefficient Σ.  For a planar interface the curvature
+# vanishes and surface tension forces do not contribute to the momentum
+# equation.  Nevertheless a small positive value is retained for numerical
+# consistency.
+Sigma       0.01
+
+# Interfacial thickness ξ in lattice units.  The hyperbolic tangent
+# profile spans approximately 2ξ lattice nodes.  Larger values smear the
+# interface and may reduce spurious currents at the expense of accuracy.
+xi          5.0
+
+# Mobility M in lattice units.  Controls the time scale of the Cahn–Hilliard
+# equation.  A moderate value is chosen by default.  Smaller values slow
+# down diffusion across the interface.
+M           0.02
+
+# Lattice velocity u_lb.  This sets the lattice Mach number via Ma ≈ u_lb/
+# sqrt(3).  For incompressible flow choose u_lb ≪ 0.1.  A value of 0.01
+# produces sufficiently small compressibility effects.
+ulb         0.01
+
+# Body force components.  The x‑component drives the Poiseuille flow and
+# should be positive to produce flow to the right.  A simple estimate
+# Fbx = 4 * u_c * (μ_l + μ_g) works for a channel height of unity when
+# u_c is the desired centreline velocity.  Here we choose a conservative
+# value; adjust to control the resulting volumetric flux.
+Fbx         1.0e-08
+Fby         0.0
+
+# Dynamic viscosities of the two fluids.  These set the viscosity ratio
+# μ_l/μ_g and, together with the body force, determine the shear rate.  The
+# harmonic interpolation scheme inside the code ensures continuity of
+# viscosity flux across the interface.  Default values yield a ratio of 10.
+mu_l        0.1
+mu_g        0.1

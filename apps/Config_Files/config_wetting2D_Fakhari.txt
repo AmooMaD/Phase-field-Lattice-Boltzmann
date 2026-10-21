@@ -1,0 +1,40 @@
+# Fakhari-Bolster flat-wall wetting test
+# Domain: periodic x, solid wall at y=0, bulk fluid y>=1
+# theta_deg is measured through the heavy/liquid phase.
+# Start with theta=90, then test 60, 120, 30, and 150 degrees.
+
+N 256
+max_t 20.0
+out_freq 1000
+vtk_freq 1000
+
+# Phase-field values: liquid/heavy = 1, gas/light = 0
+phi_l 1.0
+phi_g 0.0
+
+# Fluid properties
+rho_l 1.0
+rho_g 0.1
+mu_l 0.1
+mu_g 0.1
+Sigma 0.01
+xi 4.0
+M 0.02
+
+# Maximum lattice velocity and body force
+ulb 0.05
+Fbx 0.0
+Fby 0.0
+
+# Target equilibrium contact angle, degrees
+theta_deg 20.0
+
+# Initial semicircular drop parameters used by wetting2D_Fakhari.h
+R0 20.0
+X0 -1
+Y0 -1
+
+
+nx	256
+ny	128
+

@@ -1,0 +1,5 @@
+/home/zadm8483/Documents/phase-field Allain-Cahn/build/CMakeFiles/edit_cache.dir
+/home/zadm8483/Documents/phase-field Allain-Cahn/build/CMakeFiles/rebuild_cache.dir
+/home/zadm8483/Documents/phase-field Allain-Cahn/build/apps/CMakeFiles/COOLBM.dir
+/home/zadm8483/Documents/phase-field Allain-Cahn/build/apps/CMakeFiles/edit_cache.dir
+/home/zadm8483/Documents/phase-field Allain-Cahn/build/apps/CMakeFiles/rebuild_cache.dir

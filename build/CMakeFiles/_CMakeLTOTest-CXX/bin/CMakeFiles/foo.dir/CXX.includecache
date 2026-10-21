@@ -1,0 +1,10 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/zadm8483/Documents/phase-field Allain-Cahn/build/CMakeFiles/_CMakeLTOTest-CXX/src/foo.cpp
+

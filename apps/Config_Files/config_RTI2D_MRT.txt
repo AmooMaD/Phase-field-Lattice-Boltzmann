@@ -1,0 +1,19 @@
+N           128
+max_t       100.0
+out_freq    1600
+vtk_freq    1600
+
+rho_l       0.12 #1.0
+rho_g       0.04 #0.3333333333
+mu_l        0.0024
+mu_g        0.0024
+Sigma       0.000111
+xi          5.0
+M           0.02
+ulb         0.04
+Fbx         0.0
+Fby         -1.25e-5
+
+
+nu_l 		0.002
+nu_g 		

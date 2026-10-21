@@ -1,0 +1,45 @@
+# Geometry file
+geometry anulus.txt
+
+# Injection
+inj_vel 0.001
+inj_radius 0.02
+
+# Time control
+max_t 100
+out_freq 10000
+vtk_freq 10000
+
+# Phase-field bulk values
+phi_l 1.
+phi_g 0.00000000000000000001
+
+# Densities
+rho_l 1.
+rho_g 0.1
+
+# Surface tension and interface thickness
+Sigma 0.01
+xi 5.0
+M 0.01
+
+# Lattice velocity scale
+ulb 0.1
+
+# Body forces
+Fbx 0.0
+Fby 0.0
+
+# Viscosities
+mu_l 1.
+mu_g 0.003
+
+# Reference length for non-dimensional numbers
+N 128
+
+# ───── Wetting parameters ─────
+# natural_wetting = 1 → θ = 90°, φ_s = φ_f
+# natural_wetting = 0 → use Eq. (25) with theta_deg
+natural_wetting 1
+theta_deg 60.0
+
